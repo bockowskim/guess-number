@@ -25,7 +25,7 @@ document.querySelector('.check').addEventListener('click', function(){
       displayMessage("you've lost the game👀");
       document.querySelector('.score').textContent = 0;
     }
-    else if(number === guessNumber){
+  }else if(number === guessNumber){
 document.querySelector('.guessingNumber').textContent = guessNumber
     displayMessage("That's the number🐱‍🏍");
     changeBackground("green");
