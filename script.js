@@ -20,8 +20,7 @@ document.querySelector('.check').addEventListener('click', function(){
    displayMessage(number > guessNumber ? "the number is too high 🤔" : "the number is too low 🤔");
    score--;
    document.querySelector('.score').textContent = score;
-    }
-    else{
+    }else{
       displayMessage("you've lost the game👀");
       document.querySelector('.score').textContent = 0;
     }
