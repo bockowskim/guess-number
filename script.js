@@ -22,7 +22,7 @@ document.querySelector('.check').addEventListener('click', function(){
    document.querySelector('.score').textContent = score;
     }
     else{
-      document.querySelector('.message').textContent = "you've lost the game👀";
+      displayMessage("you've lost the game👀");
       document.querySelector('.score').textContent = 0;
     }
 //   }else if(number < guessNumber){
@@ -41,7 +41,7 @@ document.querySelector('.check').addEventListener('click', function(){
 //     }
   }else if(number === guessNumber){
 document.querySelector('.guessingNumber').textContent = guessNumber
-    document.querySelector('.message').textContent = "That's the number🐱‍🏍";
+    displayMessage("That's the number🐱‍🏍");
     document.querySelector('body').style.backgroundColor = "green";
     if(score > highscore){
       highscore = score;
@@ -53,7 +53,7 @@ document.querySelector('.guessingNumber').textContent = guessNumber
 document.querySelector('.reset').addEventListener('click', function(){
   score = 20;
   guessNumber = Math.trunc(Math.random() * 20) + 1;
-  document.querySelector('.message').textContent = "Guess the number";
+  displayMessage("Guess the number");
   document.querySelector('.score').textContent = score;
   document.querySelector('.guessingNumber').textContent = "??";
   document.querySelector('.typenumber').value = '';
