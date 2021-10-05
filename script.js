@@ -1,10 +1,6 @@
 let guessNumber = Math.trunc(Math.random() * 20) + 1;
 
-
-// console.log(number);
-
 let score = 20;
-
 let highscore = 0;
 
 document.querySelector('.check').addEventListener('click', function(){
@@ -13,9 +9,11 @@ document.querySelector('.check').addEventListener('click', function(){
   
   if(!number){
     document.querySelector('.message').textContent = "no number 🤔"
+  }lese if (guess !== guessNumber) {
+  
   }else if(number > guessNumber){
     if(score > 1){
-   document.querySelector('.message').textContent = "the number is too high 🤔";
+   document.querySelector('.message').textContent = number > guessNumber ? "the number is too high 🤔" : "the number is too low 🤔";
       score--;
    document.querySelector('.score').textContent = score;
     }
@@ -23,20 +21,20 @@ document.querySelector('.check').addEventListener('click', function(){
       document.querySelector('.message').textContent = "you've lost the game👀";
       document.querySelector('.score').textContent = 0;
     }
-  }else if(number < guessNumber){
-    if(score > 1){
-    document.querySelector('.message').textContent = "the number is too low 🤔";
-      score--;
-    document.querySelector('.score').textContent = score;
+//   }else if(number < guessNumber){
+//     if(score > 1){
+//     document.querySelector('.message').textContent = ;
+//       score--;
+//     document.querySelector('.score').textContent = score;
       
-    }
+//     }
     
-    else{
-      document.querySelector('.message').textContent = "you've lost the game👀";
-      document.querySelector('.score').textContent = 0;
+//     else{
+//       document.querySelector('.message').textContent = "you've lost the game👀";
+//       document.querySelector('.score').textContent = 0;
       
       
-    }
+//     }
   }else if(number === guessNumber){
 document.querySelector('.guessingNumber').textContent = guessNumber
     document.querySelector('.message').textContent = "That's the number🐱‍🏍";
