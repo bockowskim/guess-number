@@ -7,6 +7,10 @@ const displayMessage = function(message){
 document.querySelector('.message').textContent = message;
 }
 
+const changeBackground = function(background){
+  document.querySelector('body').style.backgroundColor = background;
+}
+
 document.querySelector('.check').addEventListener('click', function(){
   const number = Number(document.querySelector('.typenumber').value);
   
@@ -17,7 +21,7 @@ document.querySelector('.check').addEventListener('click', function(){
   
   }else if(number > guessNumber){
     if(score > 1){
-   document.querySelector('.message').textContent = number > guessNumber ? "the number is too high 🤔" : "the number is too low 🤔";
+   displayMessage(number > guessNumber ? "the number is too high 🤔" : "the number is too low 🤔");
       score--;
    document.querySelector('.score').textContent = score;
     }
@@ -42,7 +46,7 @@ document.querySelector('.check').addEventListener('click', function(){
   }else if(number === guessNumber){
 document.querySelector('.guessingNumber').textContent = guessNumber
     displayMessage("That's the number🐱‍🏍");
-    document.querySelector('body').style.backgroundColor = "green";
+    changeBackground("green");
     if(score > highscore){
       highscore = score;
       document.querySelector('.highscore').textContent = highscore;
@@ -57,5 +61,5 @@ document.querySelector('.reset').addEventListener('click', function(){
   document.querySelector('.score').textContent = score;
   document.querySelector('.guessingNumber').textContent = "??";
   document.querySelector('.typenumber').value = '';
-  document.querySelector('body').style.backgroundColor = "grey";
+  changeBackground("grey");
 })
