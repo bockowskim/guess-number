@@ -17,9 +17,9 @@ document.querySelector('.check').addEventListener('click', function(){
   
   if(!number){
     displayMessage("no number 🤔");
-  }lese if (guess !== guessNumber) {
+  }else if (guess !== guessNumber) {
   
-  }else if(number > guessNumber){
+  
     if(score > 1){
    displayMessage(number > guessNumber ? "the number is too high 🤔" : "the number is too low 🤔");
       score--;
